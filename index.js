@@ -5,7 +5,13 @@
  * @param {string} fahren temperature in degrees F
  * @returns {number} the number of degrees C
  */
-function convertToCelsius(fahren) {}
+
+
+function convertToCelsius(fahren) {
+let celc = (fahren - 32) * (5/9);
+  return celc;
+}
+
 
 /**
  * Takes both numbers (F, C) and display a message with
@@ -22,14 +28,28 @@ function convertToCelsius(fahren) {}
  * @param {number} fahren
  * @param {number} celc
  */
-function createMessage(fahren, celc) {}
+function createMessage(fahren, celc) {
+  if (celc > 87) {
+    return fahren + " Fahrenheit " + Math.round(celc) + " Celsius" + " Hot";
+  } else if (celc > 65 && celc <= 86) {
+    return fahren + " Fahrenheit " + Math.round(celc) + " Celsius" + " Warm";
+  } else if (celc > 33 && celc <= 64) {
+    return fahren + " Fahrenheit " + Math.round(celc) + " Celsius" + " Cold";
+  } else {
+    return fahren + " Fahrenheit " + Math.round(celc) + " Celsius" + " Very Cold";
+  }
+}
 
 /**
  * Takes a number and returns a random integer from 0 to the limit
  * @param {number} limit
  * @returns {number} a number between 0 and the int passed in
  */
-function rand(limit) {}
+
+
+function rand(limit) {
+  return Math.round(Math.random() * limit);
+}
 
 // -------------------- DONT NOT CHANGE THE CODE BELOW ---------------------- //
 
